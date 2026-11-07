@@ -318,9 +318,17 @@ footer { margin-top: clamp(3.5rem, 7vw, 6rem); padding: 2.2rem clamp(1rem, 3vw, 
   .foot { grid-template-columns: minmax(0, 1fr); }
 }
 
+/* the full name leaves no room beside it: the section links take their own line */
+@media (max-width: 52rem) {
+  html { scroll-padding-top: 6rem; }
+  .top { flex-wrap: wrap; gap: 0 1rem; }
+  .mark { padding: .8rem 0 .35rem; }
+  .tabs { width: 100%; margin-left: 0; }
+  .tabs a { padding: .35rem 0 .6rem; }
+}
+
 @media (max-width: 40rem) {
   body { font-size: 1rem; }
-  .top { gap: 1rem; }
   .looks { grid-template-columns: minmax(0, 1fr); }
   .grid, .clips { grid-template-columns: minmax(0, 1fr); }
   .perks { grid-template-columns: minmax(0, 1fr); }
