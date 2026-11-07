@@ -101,7 +101,7 @@ p { margin: 0; }
   max-width: 96rem;
   margin: 0 auto .5rem;
 }
-.hero h1 { font-size: clamp(2.7rem, 6vw, 4.4rem); letter-spacing: .01em; }
+.hero h1 { font-size: clamp(2.7rem, 5.4vw, 4.4rem); letter-spacing: .01em; }
 .hero .kicker { color: var(--gold); margin-bottom: .55rem; }
 .byline { margin-top: .3rem; font: 400 clamp(1.15rem, 2vw, 1.45rem)/1.25 var(--serif); color: var(--mute); }
 .byline strong { color: var(--text); font-weight: 500; }
