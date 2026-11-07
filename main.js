@@ -17,7 +17,7 @@ for (const fig of document.querySelectorAll('.cmp')) {
   range.type = 'range';
   range.min = 0;
   range.max = 100;
-  range.value = 50;
+  range.value = fig.dataset.start || 50;
   stage.append(handle, range);
 
   const bar = document.createElement('div');
