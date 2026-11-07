@@ -1,0 +1,15 @@
+VS Reimagined showcase site
+Copyright (c) 2026 HDRcade (Tyler Freeman). All rights reserved.
+
+This repository is not under the CC0 licence of the VS Reimagined code.
+
+The screenshots and clips in img/ show the VS Reimagined texture pack, which has its
+own licence: use with VS Reimagined only. Sharing a link to this site is welcome.
+Do not reuse these images or clips, or crop textures from them, for any other project,
+and do not use them to train AI models.
+
+The original Vagrant Story artwork visible in the images is (c) Square Enix. This
+notice covers only the work added for VS Reimagined, not the original art.
+
+VS Reimagined is an unofficial fan project, not affiliated with or endorsed by
+Square Enix.
