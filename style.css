@@ -257,6 +257,7 @@ section { padding: clamp(3rem, 7vw, 5.5rem) clamp(1rem, 3vw, 2.5rem) 0; }
 .clips figcaption { padding: .4rem 0 0; color: var(--mute); font-size: .88rem; }
 
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.6rem, 1.4vw, 1rem); }
+.grid.after { margin-top: clamp(.6rem, 1.4vw, 1rem); }
 .grid figure { margin: 0; }
 .grid a { display: block; }
 .grid figcaption { padding: .4rem 0 .3rem; color: var(--mute); font-size: .88rem; }
