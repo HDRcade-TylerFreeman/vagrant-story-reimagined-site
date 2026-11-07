@@ -82,6 +82,24 @@ for (const fig of document.querySelectorAll('.cmp')) {
   show(pairs[0]);
 }
 
+// Thumbnails enlarge over the page. Only the picture itself keeps it open: the X or a click anywhere else closes it.
+// Esc and returning focus to the thumbnail come with <dialog>; without this script the links still open the image.
+const box = document.createElement('dialog');
+box.className = 'box';
+box.innerHTML = '<button type="button" aria-label="Close">&times;</button><img alt=""><p></p>';
+document.body.append(box);
+const big = box.querySelector('img');
+box.addEventListener('click', e => { if (e.target !== big) box.close(); });
+for (const link of document.querySelectorAll('.grid a')) {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    big.src = link.href;
+    big.alt = link.querySelector('img').alt;
+    box.querySelector('p').textContent = link.closest('figure').querySelector('figcaption').textContent;
+    box.showModal();
+  });
+}
+
 // The heat haze clips wait for a click from anyone who asks for less motion.
 if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
   for (const v of document.querySelectorAll('video[autoplay]')) {

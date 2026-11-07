@@ -259,7 +259,39 @@ section { padding: clamp(3rem, 7vw, 5.5rem) clamp(1rem, 3vw, 2.5rem) 0; }
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.6rem, 1.4vw, 1rem); }
 .grid.after { margin-top: clamp(.6rem, 1.4vw, 1rem); }
 .grid figure { margin: 0; }
-.grid a { display: block; }
+.grid a { display: block; cursor: zoom-in; }
+
+/* Enlarged thumbnail: fills the screen, so a click beside the picture lands on the dialog and closes it */
+html:has(.box[open]) { overflow: hidden; }
+.box {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: clamp(.5rem, 2vw, 1.5rem);
+  border: 0;
+  background: rgba(12, 10, 9, .94);
+  color: var(--mute);
+}
+.box[open] { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .6rem; }
+.box img { width: auto; max-width: 100%; max-height: calc(100dvh - 5.5rem); min-height: 0; }
+.box p { font-size: .9rem; text-align: center; }
+.box button {
+  position: absolute;
+  top: .6rem;
+  right: .6rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 2px solid var(--text);
+  border-radius: 50%;
+  background: rgba(12, 10, 9, .78);
+  color: var(--text);
+  font: 400 1.5rem/1 var(--sans);
+  cursor: pointer;
+}
+.box button:hover { color: var(--gold); border-color: var(--gold); }
+
 .grid figcaption { padding: .4rem 0 .3rem; color: var(--mute); font-size: .88rem; }
 
 .perks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.4rem 2.5rem; margin: 0; padding: 0; list-style: none; }
